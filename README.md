@@ -1,5 +1,12 @@
-First we need to satrt with the installation of Docker on your system.
-Enabling containerization and the use of Docker CLI. 
-After setting up or cloning our web application (e.g., calculator.js) from our previous task, we created a Dockerfile to define the app's containerization process, specifying the base image, setting the working directory, copying source files, installing dependencies, exposing the necessary port (3040).
-Setting the start command. We then built the Docker image using the docker build command, naming it calculator-app. To simplify running the app in a container, we created a docker-compose.yml file that defined the service configuration, and launched the environment with docker-compose up. Testing was done by sending requests to the app's endpoints (e.g., /add and /health) via curl or a browser. Lastly, we pushed the Docker image to Docker Hub by tagging it and executing the docker push command, making it accessible from the cloud.
-By following all these steps given we now have successfully have demonstrated docker.
+I Re-used the code from the previous task.
+## Steps:
+1) Install the google cloud SDK in your system.
+2) After installation authenticate by giving this command "gcloud auth login".
+3) set your GCP by using this command or by doing it manually in the GCR console "gcloud config set project sit737-2025-prac5d-455904".
+4) Enable the container registry API.
+5) Give all the required permission as owner, storage admin.
+6) Check the billing which needs to be active.
+7) Autenticate docker with google cloud using the command "gcloud auth configure-docker".
+8) Tag the docker image for the GCR using the command "docker tag calculator gcr.io/sit737-2025-prac5d-455904/calculator:latest".
+9) Now push the docker image to the GCR using the command "docker push gcr.io/sit737-2025-prac5d-455904/calculator:latest".
+10) Lastly verify the image.
