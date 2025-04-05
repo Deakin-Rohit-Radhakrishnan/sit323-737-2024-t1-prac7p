@@ -1,1 +1,5 @@
-# sit737-2025-prac5p
+First we need to satrt with the installation of Docker on your Masystem.
+Enabling containerization and the use of Docker CLI. 
+After setting up or cloning our web application (e.g., calculator.js) from our previous task, we created a Dockerfile to define the app's containerization process, specifying the base image, setting the working directory, copying source files, installing dependencies, exposing the necessary port (3040).
+Setting the start command. We then built the Docker image using the docker build command, naming it calculator-app. To simplify running the app in a container, we created a docker-compose.yml file that defined the service configuration, and launched the environment with docker-compose up. Testing was done by sending requests to the app's endpoints (e.g., /add and /health) via curl or a browser. Lastly, we pushed the Docker image to Docker Hub by tagging it and executing the docker push command, making it accessible from the cloud.
+By following all these steps given we now have successfully have demonstrated docker.
