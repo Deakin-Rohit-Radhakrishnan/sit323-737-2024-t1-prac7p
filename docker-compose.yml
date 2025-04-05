@@ -1,0 +1,10 @@
+services:
+  calculator:
+    build: .
+    ports:
+      - "3040:3040"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3040/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
