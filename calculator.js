@@ -24,12 +24,6 @@ const sub = (n1, n2) => {
 const mul = (n1, n2) => {
     return n1*n2;
 };
-const div = (n1, n2) => {
-    if (n2 === 0) {
-        throw new Error("Cannot divide by zero");
-    }
-    return n1 / n2;
-}
 
 
 const calculate = (req, res, operation) => {
@@ -45,7 +39,6 @@ const calculate = (req, res, operation) => {
             case "add": result = add(n1, n2); break;
             case "sub": result = sub(n1, n2); break;
             case "mul": result = mul(n1, n2); break;
-            case "div": result = div(n1, n2); break;
             default: throw new Error("Invalid operation");
         }
         logger.log({
@@ -66,7 +59,6 @@ const calculate = (req, res, operation) => {
 app.get("/add", (req, res) => calculate(req, res, "add"));
 app.get("/sub", (req, res) => calculate(req, res, "sub"));
 app.get("/mul", (req, res) => calculate(req, res, "mul"));
-app.get("/div", (req, res) => calculate(req, res, "div"));
 
 app.get("/health", (req, res) => {
     res.status(200).send("OK");
