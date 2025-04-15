@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 I Re-used the code from the previous task.
 ## Steps:
 1) Install the google cloud SDK in your system.
@@ -10,3 +11,5 @@ I Re-used the code from the previous task.
 8) Tag the docker image for the GCR using the command "docker tag calculator gcr.io/sit737-2025-prac5d-455904/calculator:latest".
 9) Now push the docker image to the GCR using the command "docker push gcr.io/sit737-2025-prac5d-455904/calculator:latest".
 10) Lastly verify the image.
+=======
+
