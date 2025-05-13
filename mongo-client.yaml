@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongo-client
+spec:
+  containers:
+    - name: mongo-client
+      image: mongo:5.0
+      command: ["mongo", "my-mongo-mongodb:27017"]
+      tty: true

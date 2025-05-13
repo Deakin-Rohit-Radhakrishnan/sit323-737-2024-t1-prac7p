@@ -1,0 +1,44 @@
+{
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolume\",\"metadata\":{\"annotations\":{},\"name\":\"mongo-pv\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"capacity\":{\"storage\":\"5Gi\"},\"hostPath\":{\"path\":\"/mnt/data\"},\"persistentVolumeReclaimPolicy\":\"Retain\",\"storageClassName\":\"standard\"}}\n",
+            "pv.kubernetes.io/bound-by-controller": "yes"
+        },
+        "creationTimestamp": "2025-05-13T04:09:31Z",
+        "deletionGracePeriodSeconds": 0,
+        "deletionTimestamp": "2025-05-13T04:19:57Z",
+        "finalizers": [],
+        "name": "mongo-pv",
+        "resourceVersion": "3333",
+        "uid": "bd6718e5-521e-4758-97da-24dae334b861"
+    },
+    "spec": {
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "capacity": {
+            "storage": "5Gi"
+        },
+        "claimRef": {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "name": "mongo-pvc",
+            "namespace": "default",
+            "resourceVersion": "2768",
+            "uid": "930775c0-ac2f-4540-8a74-29a8a95dc2e3"
+        },
+        "hostPath": {
+            "path": "/mnt/data",
+            "type": ""
+        },
+        "persistentVolumeReclaimPolicy": "Retain",
+        "storageClassName": "standard",
+        "volumeMode": "Filesystem"
+    },
+    "status": {
+        "lastPhaseTransitionTime": "2025-05-13T04:09:31Z",
+        "phase": "Bound"
+    }
+}
